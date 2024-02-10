@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.layout {
+    position: relative;
+    /* height: 100vh; */
+    /* overflow: hidden; */
+    background: rgba(233, 231, 231, 0.5);
+}
+
+.layout::before {
+    /* background: url(..//../images/library-2.jpg) no-repeat; */
+    content: "";
+    background-size: cover;
+    /* opacity: 0.6; */
+    /* fill-opacity: 0.5; */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.main-wraper {
+    z-index: -1;
+    max-width: 1000px;
+    margin: auto;
+    padding-top: 100px;
+
+}
