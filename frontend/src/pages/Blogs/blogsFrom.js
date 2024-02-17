@@ -4,6 +4,7 @@ import axios from "axios";
 import "./blogs.css"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { BASE_URL } from "../../constant";
 axios.defaults.baseURL = "http://localhost:4040";
 const BlogsForm = () => {
     const navigation = useNavigate()

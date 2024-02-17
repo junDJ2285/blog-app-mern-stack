@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import BlogsCard from "./BlogsCard";
 import "./blogs.css"
 import { useNavigate, useParams } from "react-router-dom";
+import { BASE_URL } from "../../constant";
 
 axios.defaults.baseURL = "http://localhost:4040";
 

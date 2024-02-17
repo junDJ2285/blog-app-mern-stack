@@ -4,6 +4,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import BlogsCard from "./BlogsCard";
 import "./blogs.css"
+import { BASE_URL } from "../../constant";
 
 axios.defaults.baseURL = "http://localhost:4040";
 const MyBlogs = () => {
