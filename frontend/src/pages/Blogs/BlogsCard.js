@@ -15,7 +15,7 @@ const BlogsCrad = ({ title, description, image, userName, profileImage, time, id
     const deleteBlog = async (id) => {
         try {
             // navigation("/blogs")
-            const { data } = await axios.delete(`/api/v1/blog/delete-Blog/${id}`)
+            const { data } = await axios.delete(`${BASE_URL}/api/v1/blog/delete-Blog/${id}`)
             if (data.success) {
                 alert("blog deleted")
             }
@@ -33,7 +33,8 @@ const BlogsCrad = ({ title, description, image, userName, profileImage, time, id
                         width: 290,
                         margin: "13px 5px",
                         // borderRadius: "2px",
-                        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)"
+                        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+                        color: "black"
                     }}
                     cover={
                         <img

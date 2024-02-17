@@ -4,6 +4,7 @@ import React from 'react';
 import { Button, Checkbox, Form, Input } from 'antd';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
+import { BASE_URL } from "../../constant";
 
 axios.defaults.baseURL = "http://localhost:4040/";
 // import { Button, Checkbox, Form, Input } from 'antd';
@@ -12,7 +13,7 @@ const Signup = () => {
     const navigation = useNavigate()
     const onFinish = async (values) => {
         try {
-            const { data } = await axios.post('/api/v1/user/register', {
+            const { data } = await axios.post(`${BASE_URL}/api/v1/user/register`, {
                 userName: values.userName,
                 email: values.email,
                 password: values.password,

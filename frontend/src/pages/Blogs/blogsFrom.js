@@ -12,7 +12,7 @@ const BlogsForm = () => {
     const onFinish = async (values) => {
         try {
             const id = localStorage.getItem("userId")
-            const { data } = await axios.post("/api/v1/blog/create-Blog", {
+            const { data } = await axios.post(`${BASE_URL}/api/v1/blog/create-Blog`, {
                 title: values.title,
                 image: values.image,
                 description: values.description,

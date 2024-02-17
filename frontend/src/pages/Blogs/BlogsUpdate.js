@@ -17,7 +17,7 @@ const BlogUpdate = () => {
     console.log("ooooo", _id)
     const allBlogs = async () => {
         try {
-            const { data } = await axios.get(`/api/v1/blog/get-Blog/${_id}`)
+            const { data } = await axios.get(`${BASE_URL}/api/v1/blog/get-Blog/${_id}`)
             console.log("set blo9gs", data.blog)
             if (data?.success) {
                 setBlogs(data?.blog)
@@ -39,7 +39,7 @@ const BlogUpdate = () => {
     const onFinish = async (values) => {
         try {
             const id = localStorage.getItem("userId")
-            const { data } = await axios.put(`/api/v1/blog/update-Blog/${_id}`, {
+            const { data } = await axios.put(`${BASE_URL}/api/v1/blog/update-Blog/${_id}`, {
                 title: values.title,
                 image: values.image,
                 description: values.description,

@@ -13,7 +13,7 @@ const MyBlogs = () => {
         try {
             const _id = localStorage.getItem("userId")
             console.log("id", _id)
-            const { data } = await axios.get(`/api/v1/blog/user-Blog/${_id}`)
+            const { data } = await axios.get(`${BASE_URL}/api/v1/blog/user-Blog/${_id}`)
             console.log("user blogs", data)
             setBlogs(data.user.blog)
             if (data.success) {

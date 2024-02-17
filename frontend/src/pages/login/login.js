@@ -15,7 +15,7 @@ const Login = () => {
 
     const onFinish = async (values) => {
         try {
-            const { data } = await axios.post("/api/v1/user/login", {
+            const { data } = await axios.post(`${BASE_URL}/api/v1/user/login`, {
                 email: values.email,
                 password: values.password,
             })
