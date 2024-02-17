@@ -1,27 +1,51 @@
+/* header.css */
 .navbar {
     display: flex;
     justify-content: space-between;
-    /* flex-direction: row; */
     width: 100%;
-    /* padding: 16px 0; */
-    /* background-color: rgb(226, 223, 223); */
-    margin-top: 3px;
+    /* padding: 20px 0; */
+    background-color: rgb(7 7 7 / 53%);
+    backdrop-filter: blur(2px);
+    /* margin-top: 3px; */
     box-shadow: 0px -3px 8px 1px;
     position: fixed;
     z-index: 1;
-    /* border-bottom: 1px solid rgb(156, 153, 153); */
+    transition: background-color 0.5s ease-in-out;
+    /* Add transition for background color */
+    border-bottom: 1px solid rgb(156, 153, 153);
+}
+
+.navbar.scrolled {
+    background-color: rgb(108 107 107);
+    /* Change the background color when scrolled */
 }
 
 .nav-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px 50px;
-    color: rgb(96, 96, 255);
+    color: white;
+    /* Adjust text color for better visibility */
+    font-family: "League Spartan", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 .header-btn {
-    padding: 27px 24px;
+    display: flex;
+    justify-content: end;
+    padding: 19px 25px;
+    align-items: center;
+    width: 403px;
+
 }
 
 .button {
-    margin: 0 10px;
-
+    margin: 0 15px;
+    color: white;
+    border: 2px solid #575555;
+    box-shadow: 0px 0px 9px 1px #3b3a3a;
+    border-radius: 8px;
+    padding: 0px 16px;
 }

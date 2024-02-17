@@ -5,13 +5,12 @@
 
 .layout {
     position: relative;
-    /* height: 100vh; */
-    /* overflow: hidden; */
-    background: rgba(233, 231, 231, 0.5);
+    background: rgba(63, 62, 62, 0.5);
+    height: 100%
 }
 
 .layout::before {
-    /* background: url(..//../images/library-2.jpg) no-repeat; */
+    background: url(../../assectd/images/main-Img.png) no-repeat;
     content: "";
     background-size: cover;
     /* opacity: 0.6; */
@@ -24,10 +23,5 @@
     z-index: -1;
 }
 
-.main-wraper {
-    z-index: -1;
-    max-width: 1000px;
-    margin: auto;
-    padding-top: 100px;
 
-}
+.main-container {}

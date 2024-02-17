@@ -90,9 +90,9 @@ exports.deleteBlog = async (req, res) => {
 
         return res.status(200).send({
             success: true,
-            message: "blog deleted"
+            message: "blog deleted",
+            blog
         })
-
     } catch (error) {
         console.log(error)
         return res.status(500).send({

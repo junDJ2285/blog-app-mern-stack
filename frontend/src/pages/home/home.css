@@ -1,0 +1,87 @@
+.home {
+    background: url("../../assectd/images/main-Img.png");
+    display: flex !important;
+    height: 600px;
+    background-color: aqua;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.home-slide-2 {
+    background: url("../../assectd/images/Image.png");
+    display: flex !important;
+    height: 600px;
+    background-color: aqua;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.home-slide-3 {
+    background: url("../../assectd/images/Rectangle\ 9.png");
+    display: flex !important;
+    height: 600px;
+    background-color: aqua;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.home-container {
+    width: 90%;
+    margin: auto;
+}
+
+.home-para-flex {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 33px 0px;
+
+}
+
+.line {
+    width: 64px;
+    height: 2px;
+    background-color: gray;
+    margin: 12px 15px;
+}
+
+
+.home-content {
+    width: 50%;
+    height: fit-content;
+    position: relative;
+    top: 101px;
+}
+
+.popular-blogs {
+    display: flex;
+    flex-direction: column;
+    padding: 70px 0px;
+    width: 90%;
+    margin: auto;
+    color: white;
+
+}
+
+.home-blogs {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: end;
+}
+
+.blog-btn {
+    color: wheat;
+    text-decoration: none;
+    border: 3px solid rgb(118 121 115);
+    /* width: 41px; */
+    border-radius: 13px;
+    padding: 6px 19px;
+    margin: 17px 0px;
+}

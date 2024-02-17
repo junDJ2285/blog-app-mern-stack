@@ -28,6 +28,8 @@ const BlogsForm = () => {
             }
         } catch (error) {
             console.log(error)
+        } finally {
+            form.setFieldsValue("")
         }
     }
     const onFinishFailed = (errorInfo) => {
@@ -44,90 +46,92 @@ const BlogsForm = () => {
         setIsModalOpen(false);
     };
     return (
-        <div className="blogs-from">
-            <Button type="primary" onClick={showModal}>
+        <div className="from">
+            {/* <Button type="primary" onClick={showModal}>
                 ADD BLOG
             </Button>
-            <Modal title="ADD BLOG" footer={null} open={isModalOpen} onOk={handleOk} width={650} onCancel={handleCancel}>
-                <Form
-                    form={form}
-                    name="basic"
-                    labelCol={{
-                        span: 4,
-                    }}
-                    wrapperCol={{
-                        // span: 16,
-                    }}
-                    style={{
-                        width: 600,
-                    }}
-                    initialValues={{
-                        remember: true,
-                    }}
-                    onFinish={onFinish}
-                    onFinishFailed={onFinishFailed}
-                    autoComplete="on"
+            <Modal title="ADD BLOG" footer={null} open={isModalOpen} onOk={handleOk} width={650} onCancel={handleCancel}> */}
+            <Form
+                form={form}
+                name="basic"
+                className="login-form"
+                labelCol={{
+                    span: 4,
+                }}
+                wrapperCol={{
+                    span: 16,
+                }}
+                style={{
+                    width: 600,
+                    textAlign: "center"
+                }}
+                initialValues={{
+                    remember: true,
+                }}
+                onFinish={onFinish}
+                onFinishFailed={onFinishFailed}
+                autoComplete="on"
+            >
+                <Form.Item
+                    label="Title"
+                    name="title"
+                    rules={[
+                        {
+                            required: true,
+                            message: 'Please input your Title',
+                        },
+                    ]}
                 >
-                    <Form.Item
-                        label="Title"
-                        name="title"
-                        rules={[
-                            {
-                                required: true,
-                                message: 'Please input your Title',
-                            },
-                        ]}
-                    >
-                        <Input />
-                    </Form.Item>
-                    <Form.Item
-                        label="Image"
-                        name="image"
-                        rules={[
-                            {
-                                required: true,
-                                message: 'Please select image',
-                            },
-                        ]}
-                    >
-                        <Input />
-                    </Form.Item>
-                    <Form.Item
-                        label="Profile Image"
-                        name="profileImage"
-                        rules={[
-                            {
-                                required: true,
-                                message: 'Please select image',
-                            },
-                        ]}
-                    >
-                        <Input />
-                    </Form.Item>
-                    <Form.Item
-                        label="Description"
-                        name="description"
-                        rules={[
-                            {
-                                required: true,
-                                message: 'Please input your Discription',
-                            },
-                        ]}
-                    >
-                        <TextArea />
+                    <Input />
+                </Form.Item>
+                <Form.Item
+                    label="Image"
+                    name="image"
+                    rules={[
+                        {
+                            required: true,
+                            message: 'Please select image',
+                        },
+                    ]}
+                >
+                    <Input />
+                </Form.Item>
+                <Form.Item
+                    label="Profile Image"
+                    name="profileImage"
+                    rules={[
+                        {
+                            required: true,
+                            message: 'Please select image',
+                        },
+                    ]}
+                >
+                    <Input />
+                </Form.Item>
+                <Form.Item
+                    label="Description"
+                    name="description"
+                    rules={[
+                        {
+                            required: true,
+                            message: 'Please input your Discription',
+                        },
+                    ]}
+                >
+                    <TextArea />
 
-                    </Form.Item>
-                    <Form.Item>
-                        <Button type="primary" htmlType="submit">
-                            {blogId ? "Update" : "Submit"}
-                        </Button>
+                </Form.Item>
+                <Form.Item>
+                    <Button type="primary" htmlType="submit">
+                        {blogId ? "Update" : "Submit"}
+                    </Button>
 
-                    </Form.Item>
-                </Form>
-            </Modal>
+                </Form.Item>
+            </Form>
+            {/* </Modal> */}
 
 
-        </div>
+        </div >
     )
 }
 export default BlogsForm;

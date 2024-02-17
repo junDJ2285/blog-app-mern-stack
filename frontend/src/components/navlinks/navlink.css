@@ -2,24 +2,22 @@
     display: flex;
     gap: 5%;
     justify-content: center;
-    width: 60%;
+    width: 100%;
     margin: auto;
     /* border-bottom: 1px solid grey; */
-
 }
 
 .nav-link {
     text-decoration: none;
-    color: #161616;
-    margin-bottom: 10px;
-    border: 1px solid #5e5b5b;
-    background-color: white;
+    color: #161515;
+    /* margin-bottom: 10px; */
+    /* border: 1px solid #5e5b5b; */
+    color: white;
     padding: 5px 12px;
     border-radius: 5px;
 
 }
 
 .active-link {
-    box-shadow: 0px 0px 7px -1px;
-    background-color: rgb(22 119 255);
+    box-shadow: 0px 0px 11px -1px #d02a2a;
 }

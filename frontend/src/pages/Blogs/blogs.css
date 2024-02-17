@@ -1,5 +1,18 @@
 .blogs-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    padding-top: 86px;
+}
+
+.from {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: auto;
+    height: 90vh;
+    padding-top: 86px;
 }

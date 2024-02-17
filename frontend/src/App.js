@@ -5,22 +5,28 @@ import Signup from './pages/signin/signin';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { ConfigProvider } from 'antd';
 import store from './store/store';
-import { Provider } from 'react-redux';
-import Login from './pages/login/login';
+import { Provider, useSelector } from 'react-redux';
+
 import Blogs from './pages/Blogs/Blogs';
 import MyBlogs from './pages/Blogs/MyBlogs';
 import BlogsForm from './pages/Blogs/blogsFrom';
 import BlogUpdate from './pages/Blogs/BlogsUpdate';
+import Login from './pages/login/login';
+import Home from './pages/home/home';
+// const user = localStorage.getItem("user")
+// const user = useSelector((s) => s.user)
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
     children: [
-
       {
         path: "/",
-        element: < Login />,
-        // user?<Blogs /> :
+        element: <Home />
+      },
+      {
+        path: "/Login",
+        element: <Login />
       },
       {
         path: "/Sigin",
@@ -46,6 +52,7 @@ const router = createBrowserRouter([
   }
 ])
 function App() {
+
 
   return (
     <div className="App">

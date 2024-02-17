@@ -18,8 +18,7 @@ const BlogUpdate = () => {
     const allBlogs = async () => {
         try {
             const { data } = await axios.get(`/api/v1/blog/get-Blog/${_id}`)
-            console.log("set blo91\
-            gs", data.blog)
+            console.log("set blo9gs", data.blog)
             if (data?.success) {
                 setBlogs(data?.blog)
                 // navigation("/BlogUpdate")
@@ -40,7 +39,7 @@ const BlogUpdate = () => {
     const onFinish = async (values) => {
         try {
             const id = localStorage.getItem("userId")
-            const { data } = await axios.put("/api/v1/blog/update-Blog", {
+            const { data } = await axios.put(`/api/v1/blog/update-Blog/${_id}`, {
                 title: values.title,
                 image: values.image,
                 description: values.description,
@@ -57,6 +56,10 @@ const BlogUpdate = () => {
             }
         } catch (error) {
             console.log(error)
+        }
+        finally {
+            form.setFieldsValue("")
+
         }
     }
     return (

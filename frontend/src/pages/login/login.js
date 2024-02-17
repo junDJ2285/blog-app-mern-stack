@@ -23,7 +23,7 @@ const Login = () => {
             if (data.success) {
                 alert("Login successfully");
                 localStorage.setItem("userId", data.user._id)
-                navigation("/Blogs")
+                navigation("/")
                 dispatch(loginUser(data));
             }
 
@@ -58,71 +58,73 @@ const Login = () => {
 
     };
     return (
-        <Form
-            className="login-form"
-            name="basic"
-            labelCol={{
-                span: 4,
-            }}
-            wrapperCol={{
-                span: 20,
-            }}
-
-            initialValues={{
-                remember: true,
-            }}
-            onFinish={onFinish}
-            onFinishFailed={onFinishFailed}
-            autoComplete="on"
-        >
-            <Form.Item
-                label="Username"
-                name="email"
-                rules={[
-                    {
-                        required: true,
-                        message: 'Please input your username!',
-                    },
-                ]}
-            >
-                <Input />
-            </Form.Item>
-
-            <Form.Item
-                label="Password"
-                name="password"
-                rules={[
-                    {
-                        required: true,
-                        message: 'Please input your password!',
-                    },
-                ]}
-            >
-                <Input.Password />
-            </Form.Item>
-
-            <Form.Item
-                name="remember"
-                valuePropName="checked"
-                wrapperCol={{
-                    offset: 8,
-                    span: 16,
+        <div className="form">
+            <Form
+                className="login-form"
+                name="basic"
+                labelCol={{
+                    span: 4,
                 }}
-            >
-                <Checkbox>Remember me</Checkbox>
-            </Form.Item>
-
-            <Form.Item
                 wrapperCol={{
-                    offset: 8,
-                    span: 16,
+                    span: 20,
                 }}
+
+                initialValues={{
+                    remember: true,
+                }}
+                onFinish={onFinish}
+                onFinishFailed={onFinishFailed}
+                autoComplete="on"
             >
-                <Button type="primary" htmlType="submit">
-                    Submit
-                </Button>
-            </Form.Item>
-        </Form>
+                <Form.Item
+                    label="Username"
+                    name="email"
+                    rules={[
+                        {
+                            required: true,
+                            message: 'Please input your username!',
+                        },
+                    ]}
+                >
+                    <Input />
+                </Form.Item>
+
+                <Form.Item
+                    label="Password"
+                    name="password"
+                    rules={[
+                        {
+                            required: true,
+                            message: 'Please input your password!',
+                        },
+                    ]}
+                >
+                    <Input.Password />
+                </Form.Item>
+
+                <Form.Item
+                    name="remember"
+                    valuePropName="checked"
+                    wrapperCol={{
+                        offset: 8,
+                        span: 16,
+                    }}
+                >
+                    <Checkbox>Remember me</Checkbox>
+                </Form.Item>
+
+                <Form.Item
+                    wrapperCol={{
+                        offset: 8,
+                        span: 16,
+                    }}
+                >
+                    <Button type="primary" htmlType="submit">
+                        Submit
+                    </Button>
+                </Form.Item>
+            </Form>
+        </div>
     )
 };
 export default Login;

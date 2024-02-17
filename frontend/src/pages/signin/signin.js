@@ -55,7 +55,7 @@ const Signup = () => {
     return (
         <div className="form">
             <Form
-                className="sigin-form"
+                className="login-form"
                 name="signup"
                 labelCol={{
                     span: 5,

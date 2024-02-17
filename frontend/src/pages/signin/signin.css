@@ -14,4 +14,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 89px;
+    height: 90vh;
 }
